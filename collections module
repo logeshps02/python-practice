@@ -1,0 +1,9 @@
+from collections import defaultdict
+l1=["ram","set","log","lkg","logesh","senternce"]
+d1=defaultdict(list)
+
+for i in l1:
+    d1[i[0]].append(i)
+print(d1)
+
+#oython code to segregate list based on 1st letter of a word and store it in a dict 
