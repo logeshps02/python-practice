@@ -1,0 +1,45 @@
+class Cgn:
+    def __init__(self, name, mode):
+        self.name = name
+        self.mode = mode
+
+    def config_cgn(self, sharing_ratio):
+        print(f"config sharing_ratio : {sharing_ratio}")
+
+    def unconfig_cgn(self, sharing_ratio):
+        print(f"unconfig sharing_ratio : {sharing_ratio}")
+
+
+class Bgp:
+    def __init__(self, name, mode):
+        self.name = name
+        self.mode = mode
+
+    def config_bgp(self, as_num):
+        print(f"config as_num : {as_num}")
+
+    def unconfig_bgp(self, as_num):
+        print(f"unconfig as_num : {as_num}")
+
+
+class Zap:
+    def __init__(self, topo_file, input_file):
+        self.topo_file = topo_file
+        self.input_file = input_file
+
+    def get_routers_from_topo_file(self):
+
+        routers_name = []
+        for key, value in self.topo_file.items():
+            print(f"{key} : {value}")
+            routers_name.append(key)
+
+            return routers_name
+
+
+class apdata:
+    obj1=Cgn("cgn name","cgn mode")
+    obj1.config_cgn("10")
+    topo1={"hi":45}
+    obj2=Zap(topo1,"input_file1")
+    obj2.get_routers_from_topo_file()
