@@ -1,0 +1,12 @@
+import re
+s="Success4 per 90 rate is  40  percent(4/5)"
+pat=re.compile("\d+[ ]*percent")
+a1=pat.search(s)
+if a1:
+    a=a1.group()
+    print(a)
+    p1=re.compile("\d+")
+    ans1=p1.search(a)
+    if ans1:
+        ans=ans1.group()
+        print(ans)
