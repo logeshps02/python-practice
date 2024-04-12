@@ -1,0 +1,19 @@
+my_dict = {
+    'John': {'Age': 30, 'Job': 'Engineer'},
+    'Jane': {'Age': 28, 'Job': 'Doctor'},
+    'Jim': {'Age': 28, 'Job': 'Doctor', "Mob": "9099012345"}
+
+}
+#collect name and mob no. and store it in a new dict(store as "Not provided" incase if it doesn't have)
+
+
+my_dict["ram"] = {'Age': 25, 'Job': 'Driver', "Mob": '987654321'}
+print(my_dict)
+
+dict2 = {}
+for key, val in my_dict.items():
+    a = key
+    b = val
+    mobile=b.get("Mob","Not provided")
+    dict2[a]=mobile
+print(dict2)
