@@ -1,0 +1,19 @@
+sum_odd=0
+sum_even=0
+total=0
+credit_card=input("enter the card number:")
+credit_card.replace("-","")
+credit_card=credit_card[::-1]
+for i in credit_card[::2]:
+  sum_odd+=int(i)
+for i in credit_card[1::2]:
+   i=int(i)*2n the ultimate(final) step, we make sure to check that the total sum is divisible by 10. If it is, the program will print "VALID," indicating t
+   if i>=10:
+     sum_even+=(1+(i%10))
+   else:
+     sum_even+=i
+total=sum_odd+sum_even
+if total%10==0:
+  print("card number is valid")
+else:
+  print("card number is invalid")
