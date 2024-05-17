@@ -1,0 +1,31 @@
+import bisect
+
+sample=[2,5,5, 10, 23, 33,33, 44, 56, 66, 99]
+
+
+bisect.insort(sample,10)
+print(sample)
+
+a=bisect.bisect(sample,5)
+print(a)
+
+b=bisect.bisect_left(sample,5)
+print(b)
+
+c=a=bisect.bisect_right(sample,5)
+print(c)
+
+def next_largest_element(list1,num):
+    ind=bisect.bisect_right(list1,num)
+    if ind<len(list1):
+        print("next_largest_element is : ",list1[ind])
+    else:
+        print("Nil")
+next_largest_element(sample,35)
+
+cutoff=[50,60,70,80,90]
+rank=["F","E","D","C","B","A"]
+def grade(score,cutoff, rank):
+    ind= bisect.bisect_right(cutoff,score)
+    print(rank[ind])
+grade(88,cutoff,rank)
