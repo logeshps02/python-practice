@@ -1,0 +1,9 @@
+    s = input()
+    ss=list(s)
+    d1={}
+    us=list(set(s))
+    for i in us :
+        d1[i]=ss.count(i)
+    ans=sorted(d1.items(), key= lambda x : (-x[1],x[0]))
+    for i in range (3):
+        print(ans[i][0],ans[i][1])
